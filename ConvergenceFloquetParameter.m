@@ -95,7 +95,7 @@ close all;
     hold on;
     plot(n_vals, trend, '--r', 'LineWidth', 2);
     xlabel('Bandwidth $m$', 'Interpreter', 'latex', 'FontSize', fs);
-    ylabel('$\beta(m)$',    'Interpreter', 'latex', 'FontSize', fs);
+    ylabel('$|z_0- z_{0,m}|$',    'Interpreter', 'latex', 'FontSize', fs);
     grid on;
     set(gca, 'TickLabelInterpreter', 'latex', 'FontSize', fs+2);
     set(gcf, 'Position', [100, 100, 500, 300]); 
