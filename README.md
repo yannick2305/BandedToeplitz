@@ -9,12 +9,12 @@ In this computational notebook, we provide the MATLAB code for the computations 
 
 ## II.1 The complex band structure
 
-
+<p align="center"> <img src="AlgebraicSkinModesN4.pdf" alt="BandMonomer" width="400"/> </p>
 
 ## II.2 Open spectrum
 
 This animation illustrates how the open spectrum comprises the interfection of the spectra of Topelitz operators evalueted on the $r$-scaled torus, i.e.
-$$\lim_{n \to\infty}\sigma\bigl(\mathbf{T}_n(f)\bigr) = \bigcap_{r \in (0, \infty)} \sigma\Bigl(\mathbf{T}\bigl(f(r\mathbb{T})\bigr)\Bigr)$$
+$\lim_{n \to\infty}\sigma\bigl(\mathbf{T}_n(f)\bigr) = \bigcap_{r \in (0, \infty)} \sigma\Bigl(\mathbf{T}\bigl(f(r\mathbb{T})\bigr)\Bigr)$
 
 - `CollapseSymbolMovie.m`
 
