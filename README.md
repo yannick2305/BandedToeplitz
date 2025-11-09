@@ -7,11 +7,14 @@
 
 In this computational notebook, we provide the MATLAB code for the computations in [1].
 
+## II.1 The complex band structure
 
 
-## II.4 Phase change within the Band Gap
 
-This animation illustrates the phase shift $\alpha$ for frequencies $\omega$ within the band gap. This phase shift corresponds to the hopping between gap bands in Section II.3.
+## II.2 Open spectrum
+
+This animation illustrates how the open spectrum comprises the interfection of the spectra of Topelitz operators evalueted on the $r$-scaled torus, i.e.
+$$\lim_{n \to\infty}\sigma\bigl(\mathbf{T}_n(f)\bigr) = \bigcap_{r \in (0, \infty)} \sigma\Bigl(\mathbf{T}\bigl(f(r\mathbb{T})\bigr)\Bigr)$$
 
 - `CollapseSymbolMovie.m`
 
