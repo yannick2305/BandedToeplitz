@@ -13,7 +13,7 @@ In this computational notebook, we provide the MATLAB code for the computations 
 
 This animation illustrates the phase shift $\alpha$ for frequencies $\omega$ within the band gap. This phase shift corresponds to the hopping between gap bands in Section II.3.
 
-- `TwoD_DefectMaster.m` or `TwoD_AlphaCompute.m`
+- `CollapseSymbolMovie.m`
 
 <p align="center"> <img src="animation_r_variation.gif" width="500"/>  <p align="center"> <img src="animation_r_variation_complex.gif" width="500"/>  
 
