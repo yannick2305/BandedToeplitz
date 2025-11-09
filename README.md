@@ -15,6 +15,6 @@ This animation illustrates the phase shift $\alpha$ for frequencies $\omega$ wit
 
 - `TwoD_DefectMaster.m` or `TwoD_AlphaCompute.m`
 
-<p align="center"> <img src="animation_r_variation.gif" width="500"/>
+<p align="center"> <img src="animation_r_variation.gif" width="500"/>  <p align="center"> <img src="animation_r_variation_complex.gif" width="500"/>  
 
 
