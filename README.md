@@ -25,7 +25,9 @@ This animation illustrates how the open spectrum comprises the interfection of t
 
 ## II.3 Reality of open limit
 
+- `JaffardCBSEstimate.m`
 
+<p align="center"> <img src="LambdaOfF.png" alt="OpenLimitReal" width="700"/> </p>
 
 ## II.4 Defect Modes
 
