@@ -10,6 +10,8 @@ In this computational notebook, we provide the MATLAB code for the computations 
 ## II.1 The complex band structure
 We plot the phase and the magnitude of the roots to the polynomial $f_m(z) - \lambda = 0$ as a function of real valued $\lambda$. The code `CBScontinuous.m` is implemented via a root tracking algorithm and plots the roots directly as $z(\lambda)$. Another method is to compute the roots sparately for each $\lambda$, this is also implented in `CBSscatter.m`.
 
+The blue crosses that are overlayed with the complex band denote the numerically computet exponential decay rates of the eigenvector sof Toeplitz matrices.
+
 - `CBScontinuous.m`
 <p align="center"> <img src="CBSandDecay.png" alt="BandedCBS" width="400"/> </p>
 
