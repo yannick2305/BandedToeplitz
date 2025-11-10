@@ -17,7 +17,7 @@ We plot the phase and the magnitude of the roots to the polynomial $f_m(z) - \la
 
 This animation illustrates how the open spectrum comprises the interfection of the spectra of Topelitz operators evalueted on the $r$-scaled torus, i.e.
 
-<p align="center"> <img src="OpenLimitDefinition.png" alt="OpenLimit" width="700"/> </p>
+<p align="center"> <img src="OpenLimitDefinition.png" alt="OpenLimit" width="600"/> </p>
 
 - `CollapseSymbolMovie.m`
 
