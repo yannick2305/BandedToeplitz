@@ -23,4 +23,11 @@ This animation illustrates how the open spectrum comprises the interfection of t
 
 <p align="center"> <img src="animation_r_variation.gif" width="500"/>  <p align="center"> <img src="animation_r_variation_complex.gif" width="500"/>  
 
+## II.3 Defect Modes
+
+We numerically illusrate the composite decay bounds which act on defect modes.
+
+- `JaffardCBSEstimate.m`
+
+<p align="center"> <img src="JaffardCBS.png" alt="OpenLimit" width="700"/> </p>
 
