@@ -1,6 +1,6 @@
 # Spectra of m-Banded Toeplitz operators
 
-**Authors:** E. O. HILTUNEN and Y. DE BRUIJN  
+**Authors:** Y. DE BRUIJN and  E. O. HILTUNEN
 **Date:** 9.11.2025
 
 ---
