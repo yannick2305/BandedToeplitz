@@ -40,10 +40,7 @@ In some cases, the open spectrum of the pristine Toeplitz operator, ot generally
 
 ## III. Non-Hermitian Skin effect
 
-When using the code in the repository, please cite the following reference:
-
-[1] De Bruijn, Y. and Hiltunen, E.O. (2025), *Complex Band Structure and localisation transition for tridiagonal non-Hermitian k-Toeplitz operators with defects*. 
-https://doi.org/10.48550/arXiv.2505.23610
+The code for simulating the non-Hermitian skin effect in $3$-dimensional systems may be consulted in the following repository https://github.com/jinghaocao/skin_effect and in the following paper DOI 10.4171/JEMS/1685.
 
 ## IV. References
 
