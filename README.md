@@ -13,12 +13,12 @@ We plot the phase and the magnitude of the roots to the polynomial $f_m(z) - \la
 The blue crosses that are overlayed with the complex band denote the numerically computet exponential decay rates of the eigenvector sof Toeplitz matrices.
 
 - `CBScontinuous.m`
-<p align="center"> <img src="CBSandDecay.png" alt="BandedCBS" width="400"/> </p>
+<p align="center"> <img src="Figures/CBSandDecay.png" alt="BandedCBS" width="400"/> </p>
 
 The exponential decay length of the eigenvectors of non-Hermitian $m$-banded Toeplitz operators depends on the number of bands considered. We numerically illustrate that the decay length goes to zero as the bandwidth becomes large.
 
 - `ConvergenceFloquetParameter.m`
-<p align="center"> <img src="Screenshot 2025-11-11 at 14.17.17.png" alt="BandedCBS" width="800"/> </p>
+<p align="center"> <img src="Figures/Screenshot 2025-11-11 at 14.17.17.png" alt="BandedCBS" width="800"/> </p>
 
 
 
@@ -27,7 +27,7 @@ The exponential decay length of the eigenvectors of non-Hermitian $m$-banded Toe
 
 This animation illustrates how the open spectrum comprises the interfection of the spectra of Topelitz operators evalueted on the $r$-scaled torus, i.e.
 
-<p align="center"> <img src="OpenLimitDefinition.png" alt="OpenLimit" width="600"/> </p>
+<p align="center"> <img src="Figures/OpenLimitDefinition.png" alt="OpenLimit" width="600"/> </p>
 
 - `CollapseSymbolMovie.m`
 
@@ -37,7 +37,7 @@ This animation illustrates how the open spectrum comprises the interfection of t
 
 - `JaffardCBSEstimate.m`
 
-<p align="center"> <img src="LambdaOfF.png" alt="OpenLimitReal" width="700"/> </p>
+<p align="center"> <img src="Figures/LambdaOfF.png" alt="OpenLimitReal" width="700"/> </p>
 
 ## II.4 Defect Modes
 
@@ -45,14 +45,14 @@ We numerically illusrate the composite decay bounds which act on defect modes.
 
 - `JaffardCBSEstimate.m`
 
-<p align="center"> <img src="JaffardCBS.png" alt="OpenLimit" width="700"/> </p>
+<p align="center"> <img src="Figures/JaffardCBS.png" alt="OpenLimit" width="700"/> </p>
 
 ## II.5 Complex valued frequency
 
 In some cases, the open spectrum of the pristine Toeplitz operator, ot generally for defect modes, we no longer have real valued eigenvalues. Therefore we extend the spectral plot from `CBScontinuous.m`, to complex valued frequencies. In the code for `CBScomplexLambda.m`, we compute the roots for $f_m(z)-\lambda = 0$, we sort the soots in ascending order $|z_1| \leq \dots |z_m| \leq |z_{m+1}| \leq \dots \leq |z_{2m}|, and plot $\beta$ where  $e^{-\beta} = |z_{m+1}|$. Clearly for a frequency $\lambda \in \sigma_{\text{wind}}$ it holds that $|z_{m+1}| < 1$, for which region $\beta > 0$.
 
 - `CBScomplexLambda.m`
-<p align="center"> <img src="CBSgeneralLambda.png" alt="ComplexFreq" width="700"/> </p>
+<p align="center"> <img src="Figures/CBSgeneralLambda.png" alt="ComplexFreq" width="700"/> </p>
 
 ## III. Non-Hermitian Skin effect
 
