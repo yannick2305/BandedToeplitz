@@ -15,6 +15,13 @@ The blue crosses that are overlayed with the complex band denote the numerically
 - `CBScontinuous.m`
 <p align="center"> <img src="CBSandDecay.png" alt="BandedCBS" width="400"/> </p>
 
+
+- `ConvergenceFloquetParameter.m`
+<p align="center"> <img src="Screenshot 2025-11-11 at 14.17.17.png" alt="BandedCBS" width="400"/> </p>
+
+
+
+
 ## II.2 Open spectrum
 
 This animation illustrates how the open spectrum comprises the interfection of the spectra of Topelitz operators evalueted on the $r$-scaled torus, i.e.
