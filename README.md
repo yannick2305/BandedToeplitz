@@ -70,7 +70,7 @@ $$\lim_{n\to\infty} \sigma\left(\mathbf{T}_n(f_m)\right) = \bigcap_{r>0} \sigma\
 
 We verify numerically that the open limit produces real-valued spectra providet that $\Lambda(f_m)$ is traced out by a polar curve.
 
-**Set $\Lambda(f)$** (`JaffardCBSEstimate.m`)
+**Set $\Lambda(f)$** (`OpenLimit.m`)
 
 <p align="center"> 
   <img src="Figures/LambdaOfF.png" alt="Real-valued open limit" width="700"/> 
