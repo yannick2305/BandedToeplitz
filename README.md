@@ -32,7 +32,7 @@ This animation illustrates how the open spectrum comprises the interfection of t
 
 - `CollapseSymbolMovie.m`
 
-<p align="center"> <img src="animation_r_variation.gif" width="500"/>  <p align="center"> <img src="animation_r_variation_complex.gif" width="500"/>  
+<p align="center"> <img src="Figures/animation_r_variation.gif" width="500"/>  <p align="center"> <img src="Figures/animation_r_variation_complex.gif" width="500"/>  
 
 ## II.4 Reality of open limit
 
