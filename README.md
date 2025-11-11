@@ -18,7 +18,7 @@ The blue crosses that are overlayed with the complex band denote the numerically
 The exponential decay length of the eigenvectors of non-Hermitian $m$-banded Toeplitz operators depends on the number of bands considered. We numerically illustrate that the decay length goes to zero as the bandwidth becomes large.
 
 - `ConvergenceFloquetParameter.m`
-<p align="center"> <img src="Screenshot 2025-11-11 at 14.17.17.png" alt="BandedCBS" width="700"/> </p>
+<p align="center"> <img src="Screenshot 2025-11-11 at 14.17.17.png" alt="BandedCBS" width="800"/> </p>
 
 
 
