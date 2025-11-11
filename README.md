@@ -1,11 +1,45 @@
-# Spectra of m-Banded Toeplitz operators
+<h1 align="center">Spectra of <i>m</i>-Banded Toeplitz Operators</h1>
 
-**Authors:** Y. DE BRUIJN and  E. O. HILTUNEN
-**Date:** 9.11.2025
+<p align="center">
+  <b>Y. DE BRUIJN</b> and <b>E. O. HILTUNEN</b><br>
+  <sub>November 9, 2025</sub>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/MATLAB-R2024a-orange" alt="MATLAB">
+</p>
+
+
+**Abstract:** We provide the complete computational framework supporting the theoretical results in [1].
+
+
+## II.1 The Complex Band Structure
+
+We plot the phase and magnitude of the roots of f<sub>m</sub>(z) − λ = 0 using two approaches:
+
+**Root Tracking Algorithm** (`CBScontinuous.m`)  
+Continuously tracks roots as λ varies, plotting z(λ) directly. Blue crosses overlay the complex band structure, denoting numerically computed exponential decay rates of Toeplitz matrix eigenvectors.
+
+<p align="center"> 
+  <img src="Figures/CBSandDecay.png" alt="Complex Band Structure and Decay" width="350"/> 
+</p>
+
+**Discrete Root Finding** (`CBSscatter.m`)  
+Computes roots independently for each λ value.
 
 ---
 
-In this computational notebook, we provide the MATLAB code for the computations in [1].
+### Convergence of Floquet Parameters
+
+The exponential decay length of eigenvectors for non-Hermitian *m*-banded Toeplitz operators depends on the bandwidth. We numerically demonstrate that decay length approaches zero as bandwidth increases.
+
+**Script:** `ConvergenceFloquetParameter.m`
+
+<p align="center"> 
+  <img src="Figures/Screenshot 2025-11-11 at 14.17.17.png" alt="Convergence of Floquet Parameter" width="700"/> 
+</p>
+
+
 
 ## II.1 The complex band structure
 We plot the phase and the magnitude of the roots to the polynomial $f_m(z) - \lambda = 0$ as a function of real valued $\lambda$. The code `CBScontinuous.m` is implemented via a root tracking algorithm and plots the roots directly as $z(\lambda)$. Another method is to compute the roots sparately for each $\lambda$, this is also implented in `CBSscatter.m`.
@@ -71,9 +105,14 @@ The code for simulating the non-Hermitian skin effect in $3$-dimensional systems
 
 ## IV. References
 
-When using the code in the repository, please cite the following reference:
+> [1] Davies, B., De Bruijn, Y., Dupuy S. and Hiltunen, E.O. (2025), *TODO*
 
-[1] Davies, B., De Bruijn, Y., Dupuy S. and Hiltunen, E.O. (2025), *TODO*
+> [2] Habib Ammari, Silvio Barandun, Jinghao Cao, Bryn Davies, Erik Orvehed Hiltunen, Ping Liu, *The non-Hermitian skin effect with three-dimensional long-range coupling.* J. Eur. Math. Soc. (2025), https://ems.press/journals/jems/articles/14299016
 
-[2] Habib Ammari, Silvio Barandun, Jinghao Cao, Bryn Davies, Erik Orvehed Hiltunen, Ping Liu, *The non-Hermitian skin effect with three-dimensional long-range coupling.* J. Eur. Math. Soc. (2025), https://ems.press/journals/jems/articles/14299016
+
+## Citation
+
+If you use this code in your research, please cite:
+
+> Davies, B., De Bruijn, Y., Dupuy S. and Hiltunen, E.O. (2025), *TODO*
 
