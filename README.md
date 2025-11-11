@@ -22,7 +22,7 @@ The exponential decay length of the eigenvectors of non-Hermitian $m$-banded Toe
 
 ## II.2 Convergence of Pseudospectra
 - `PseudospectrumConvergence.m`
-<p align="center"> <img src="PseudospectrumConvergence.png" alt="BandedCBS" width="800"/> </p>
+<p align="center"> <img src="Figures/PseudospectrumConvergence.png" alt="BandedCBS" width="800"/> </p>
 
 ## II.4 Open spectrum
 
