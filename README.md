@@ -28,7 +28,7 @@ The exponential decay length of the eigenvectors of non-Hermitian $m$-banded Toe
 
 This animation illustrates how the open spectrum comprises the interfection of the spectra of Topelitz operators evalueted on the $r$-scaled torus, i.e.
 
-<p align="center"> <img src="Figures/OpenLimitDefinition.png" alt="OpenLimit" width="600"/> </p>
+$$\lim_{n\to\infty} \sigma\left(\mathbf{T}_n(f_m)\right) = \bigcap_{r>0} \sigma\left(\mathbf{T}\left(f_m(r\mathbb{T})\right)\right) = \left\lbrace \lambda \in \mathbb{C} ~:~ |z_{m}(\lambda)| = |z_{m+1}(\lambda)| \right\rbrace$$
 
 - `CollapseSymbolMovie.m`
 
