@@ -13,7 +13,7 @@ We plot the phase and the magnitude of the roots to the polynomial $f_m(z) - \la
 The blue crosses that are overlayed with the complex band denote the numerically computet exponential decay rates of the eigenvector sof Toeplitz matrices.
 
 - `CBScontinuous.m`
-<p align="center"> <img src="Figures/CBSandDecay.png" alt="BandedCBS" width="400"/> </p>
+<p align="center"> <img src="Figures/CBSandDecay.png" alt="BandedCBS" width="350"/> </p>
 
 The exponential decay length of the eigenvectors of non-Hermitian $m$-banded Toeplitz operators depends on the number of bands considered. We numerically illustrate that the decay length goes to zero as the bandwidth becomes large.
 
