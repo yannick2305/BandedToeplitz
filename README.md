@@ -55,6 +55,16 @@ In some cases, the open spectrum of the pristine Toeplitz operator, ot generally
 - `CBScomplexLambda.m`
 <p align="center"> <img src="Figures/CBSgeneralLambda.png" alt="ComplexFreq" width="700"/> </p>
 
+### II.7 Hermitian matrices
+For symbol functions with symmetric coeffients the symbol function may be expressed using trigonometric functions as follows
+
+$$f_m(e^{i(\alpha + i \beta)}) = a_0 + 2 \sum_{j = 1}^m a_j\bigl(\cos(\alpha k)\cosh(\beta k) - 2i\sin(\alpha k)\sinh(\beta k) \bigr)$$
+
+which has vanishing imaginary part along the paths illustrated below. Consequently the allowed quasimomenta must be restricted to these paths.
+
+- `RealSymbolContour.m`
+<p align="center"> <img src="Figures/RealSymbolFunctionHermitian.png" alt="ComplexFreq" width="700"/> </p>
+
 ## III. Non-Hermitian Skin effect
 
 The code for simulating the non-Hermitian skin effect in $3$-dimensional systems may be consulted in the following repository https://github.com/jinghaocao/skin_effect and in the following paper [2].
