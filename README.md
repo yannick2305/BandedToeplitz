@@ -17,7 +17,7 @@ The blue crosses that are overlayed with the complex band denote the numerically
 
 
 - `ConvergenceFloquetParameter.m`
-<p align="center"> <img src="Screenshot 2025-11-11 at 14.17.17.png" alt="BandedCBS" width="400"/> </p>
+<p align="center"> <img src="Screenshot 2025-11-11 at 14.17.17.png" alt="BandedCBS" width="700"/> </p>
 
 
 
