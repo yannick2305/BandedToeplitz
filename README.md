@@ -27,88 +27,108 @@ Continuously tracks roots as λ varies, plotting z(λ) directly. Blue crosses ov
 **Discrete Root Finding** (`CBSscatter.m`)  
 Computes roots independently for each λ value.
 
----
+ <p align="center"> 
+  <img src="Figures/CBSscatter.png" alt="Complex Band Structure and Decay" width="350"/> 
+</p>
 
-### Convergence of Floquet Parameters
+
+## II.2 Convergence of Floquet Parameters
 
 The exponential decay length of eigenvectors for non-Hermitian *m*-banded Toeplitz operators depends on the bandwidth. We numerically demonstrate that decay length approaches zero as bandwidth increases.
 
-**Script:** `ConvergenceFloquetParameter.m`
+**Convergence of Floquet Parameters** (`ConvergenceFloquetParameter.m`)
 
 <p align="center"> 
   <img src="Figures/Screenshot 2025-11-11 at 14.17.17.png" alt="Convergence of Floquet Parameter" width="700"/> 
 </p>
 
 
+## II.3 Convergence of Pseudospectra
 
-## II.1 The complex band structure
-We plot the phase and the magnitude of the roots to the polynomial $f_m(z) - \lambda = 0$ as a function of real valued $\lambda$. The code `CBScontinuous.m` is implemented via a root tracking algorithm and plots the roots directly as $z(\lambda)$. Another method is to compute the roots sparately for each $\lambda$, this is also implented in `CBSscatter.m`.
+We demonstrate the convergence behavior of pseudospectra for finite truncations of *m*-banded Toeplitz operators.
 
-The blue crosses that are overlayed with the complex band denote the numerically computet exponential decay rates of the eigenvector sof Toeplitz matrices.
+**Pseudospectrum** (`PseudospectrumConvergence.m`)
 
-- `CBScontinuous.m`
-<p align="center"> <img src="Figures/CBSandDecay.png" alt="BandedCBS" width="350"/> </p>
+<p align="center"> 
+  <img src="Figures/PseudospectrumConvergence.png" alt="Pseudospectrum Convergence" width="700"/> 
+</p>
 
-The exponential decay length of the eigenvectors of non-Hermitian $m$-banded Toeplitz operators depends on the number of bands considered. We numerically illustrate that the decay length goes to zero as the bandwidth becomes large.
+## II.4 Spectrum of Open Limit
 
-- `ConvergenceFloquetParameter.m`
-<p align="center"> <img src="Figures/Screenshot 2025-11-11 at 14.17.17.png" alt="BandedCBS" width="800"/> </p>
-
-## II.2 Convergence of Pseudospectra
-- `PseudospectrumConvergence.m`
-<p align="center"> <img src="Figures/PseudospectrumConvergence.png" alt="BandedCBS" width="800"/> </p>
-
-## II.4 Open spectrum
-
-This animation illustrates how the open spectrum comprises the interfection of the spectra of Topelitz operators evalueted on the $r$-scaled torus, i.e.
+This animation illustrates how the open spectrum comprises the intersection of spectra of Toeplitz operators evaluated on the *r*-scaled torus:
 
 $$\lim_{n\to\infty} \sigma\left(\mathbf{T}_n(f_m)\right) = \bigcap_{r>0} \sigma\left(\mathbf{T}\left(f_m(r\mathbb{T})\right)\right) = \left\lbrace \lambda \in \mathbb{C} ~:~ |z_{m}(\lambda)| = |z_{m+1}(\lambda)| \right\rbrace$$
 
-- `CollapseSymbolMovie.m`
+**Collapsed symbol Movie** (`CollapseSymbolMovie.m`)
 
-<p align="center"> <img src="Figures/animation_r_variation.gif" width="500"/>  <p align="center"> <img src="Figures/animation_r_variation_complex.gif" width="500"/>  
+<p align="center"> 
+  <img src="Figures/animation_r_variation.gif" alt="Open spectrum collapse (real)" width="450"/>
+  <img src="Figures/animation_r_variation_complex.gif" alt="Open spectrum collapse (complex)" width="450"/>
+</p>
 
-## II.4 Reality of open limit
+## II.5 Reality of the Open Limit
 
-- `JaffardCBSEstimate.m`
+We verify numerically that the open limit produces real-valued spectra providet that $\Lambda(f_m)$ is traced out by a polar curve.
 
-<p align="center"> <img src="Figures/LambdaOfF.png" alt="OpenLimitReal" width="700"/> </p>
+**Set $\Lambda(f)$** (`JaffardCBSEstimate.m`)
 
-## II.5 Defect Modes
+<p align="center"> 
+  <img src="Figures/LambdaOfF.png" alt="Real-valued open limit" width="700"/> 
+</p>
 
-We numerically illusrate the composite decay bounds which act on defect modes.
 
-- `JaffardCBSEstimate.m`
+## II.6 Defect Modes
 
-<p align="center"> <img src="Figures/JaffardCBS.png" alt="OpenLimit" width="700"/> </p>
+We numerically illustrate composite decay bounds acting on defect modes, demonstrating localization phenomena in perturbed systems.
 
-## II.6 Complex valued frequency
+**Eigenvector Decay Estimates** (`JaffardCBSEstimate.m`)
 
-In some cases, the open spectrum of the pristine Toeplitz operator, ot generally for defect modes, we no longer have real valued eigenvalues. Therefore we extend the spectral plot from `CBScontinuous.m`, to complex valued frequencies. In the code for `CBScomplexLambda.m`, we compute the roots for $f_m(z)-\lambda = 0$, we sort the soots in ascending order $|z_1| \leq \dots |z_m| \leq |z_{m+1}| \leq \dots \leq |z_{2m}|$, and plot $\beta$ where  $e^{-\beta} = |z_{m+1}|$. Clearly for a frequency $\lambda \in \sigma_{\text{wind}}$ it holds that $|z_{m+1}| < 1$, for which region $\beta > 0$.
+<p align="center"> 
+  <img src="Figures/JaffardCBS.png" alt="Defect mode decay bounds" width="700"/> 
+</p>
 
-- `CBScomplexLambda.m`
-<p align="center"> <img src="Figures/CBSgeneralLambda.png" alt="ComplexFreq" width="700"/> </p>
+## II.7 Complex-Valued Frequencies
 
-### II.7 Hermitian matrices
-For symbol functions with symmetric coeffients the symbol function may be expressed using trigonometric functions as follows
+For the open spectrum of pristine Toeplitz operators—and more generally for defect modes—eigenvalues are no longer restricted to the real line. We extend the analysis from `CBScontinuous.m` to complex-valued frequencies.
+
+**Method:**  
+For each λ, we compute roots of *f*<sub>*m*</sub>(*z*) − λ = 0 and sort them in ascending order by magnitude: |*z*₁| ≤ ⋯ ≤ |*z*<sub>*m*</sub>| ≤ |*z*<sub>*m*+1</sub>| ≤ ⋯ ≤ |*z*₂<sub>*m*</sub>|. We then plot the decay parameter β where *e*<sup>−β</sup> = |*z*<sub>*m*+1</sub>|. For frequencies λ ∈ σ<sub>wind</sub>, we have |*z*<sub>*m*+1</sub>| < 1, corresponding to the region where β > 0.
+
+**Complex Band Structure** (`CBScomplexLambda.m`)
+
+<p align="center"> 
+  <img src="Figures/CBSgeneralLambda.png" alt="Complex band structure for general frequencies" width="700"/> 
+</p>
+
+
+## II.8 Hermitian Matrices
+
+For symbol functions with symmetric coefficients, the symbol can be expressed using trigonometric functions:
 
 $$f_m(e^{i(\alpha + i \beta)}) = a_0 + 2 \sum_{j = 1}^m a_j\bigl(\cos(\alpha k)\cosh(\beta k) - 2i\sin(\alpha k)\sinh(\beta k) \bigr)$$
 
-which has vanishing imaginary part along the paths illustrated below. Consequently the allowed quasimomenta must be restricted to these paths.
+The imaginary part vanishes along specific paths in the complex plane. Consequently, allowed quasimomenta must be restricted to these contours.
 
-- `RealSymbolContour.m`
-<p align="center"> <img src="Figures/RealSymbolFunctionHermitian.png" alt="ComplexFreq" width="700"/> </p>
+**$\alpha$ and $\beta$ path** (`RealSymbolContour.m`)
 
-## III. Non-Hermitian Skin effect
+<p align="center"> 
+  <img src="Figures/RealSymbolFunctionHermitian.png" alt="Real symbol function contours for Hermitian case" width="700"/> 
+</p>
 
-The code for simulating the non-Hermitian skin effect in $3$-dimensional systems may be consulted in the following repository https://github.com/jinghaocao/skin_effect and in the following paper [2].
+
+## III. Non-Hermitian Skin Effect
+
+Code for simulating the non-Hermitian skin effect in 3-dimensional systems is available at:  
+**Repository:** https://github.com/jinghaocao/skin_effect
+
+See also the accompanying paper [2] for theoretical background and additional numerical methods.
+
 
 ## IV. References
 
-> [1] Davies, B., De Bruijn, Y., Dupuy S. and Hiltunen, E.O. (2025), *TODO*
+> [1] Davies, B., De Bruijn, Y., Dupuy, S. and Hiltunen, E.O. (2025), *TODO*
 
 > [2] Habib Ammari, Silvio Barandun, Jinghao Cao, Bryn Davies, Erik Orvehed Hiltunen, Ping Liu, *The non-Hermitian skin effect with three-dimensional long-range coupling.* J. Eur. Math. Soc. (2025), https://ems.press/journals/jems/articles/14299016
-
 
 ## Citation
 
