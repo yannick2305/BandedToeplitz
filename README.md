@@ -60,7 +60,7 @@ $$\lim_{n\to\infty} \sigma\left(\mathbf{T}_n(f_m)\right) = \bigcap_{r>0} \sigma\
 
 **Collapsed symbol Movie** (`CollapseSymbolMovie.m`)
 
-<p align="center"> <img src="Figures/animation_r_variation.gif" alt="Open spectrum collapse (real)" width="480"/> <br> <em>Figure 1: Open spectrum collapse (real)</em> </p> <p align="center"> <img src="Figures/animation_r_variation_complex.gif" alt="Open spectrum collapse (complex)" width="480"/> <br> <em>Figure 2: Open spectrum collapse (complex)</em> </p>
+<p align="center"> <img src="Figures/animation_r_variation.gif" alt="Open spectrum collapse (real)" width="480"/> <br> <em>Figure 1: Open spectrum collapse (real)</em> </p> <p align="center"> <img src="Figures/Open_limit_complex.gif" alt="Open spectrum collapse (complex)" width="700"/> <br> <em>Figure 2: Open limit contains complex values. Computation performed for m = 6, p = 1, q = 6</em> </p>
 
 
 <p align="center"> 
