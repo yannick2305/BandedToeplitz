@@ -2,7 +2,6 @@
 <p align="center">
   <b>Y. DE BRUIJN</b> and <b>E. O. HILTUNEN</b><br>
   <sub><i>University of Oslo</i></sub><br>
-  <sub>November 9, 2025</sub>
 </p>
 <p align="center">
   <img src="https://img.shields.io/badge/MATLAB-R2023b-orange" alt="MATLAB">
@@ -11,6 +10,7 @@
 
 **Abstract:** We provide the complete computational framework supporting the theoretical results in [1].
 
+  <sub>Last updated: November 14, 2025</sub>
 
 ## II.1 The Complex Band Structure
 
