@@ -11,25 +11,25 @@ close all;
 clc;
 
 % --- Parameters ---
-    n = 6;      % Truncation size for a_k
-    p = 1;      % Upwards decay rate
-    q = 6;      % Downwards decay rate
-    fs = 18;
-    DimT = 80;  % Dimension of finite Toeplitz matrix to simulate open limit
-    video_filename = 'Open_limit_collapse.mp4';
+    n = 6;          % Truncation size for a_k
+    p = 1;          % Upwards decay rate
+    q = 6;          % Downwards decay rate
+    fs = 30;        % Fontsize for plot annotation
+    DimT = 80;      % Dimension of finite Toeplitz matrix to simulate open limit
+    gif_filename = 'Open_limit_complex.gif';
+    delay_time = 0.05;  % Delay between frames in seconds 
 
 % --- Generate the Toeplitz operator ---
     col = zeros(n,1);
     row = zeros(1,n);
     
-    col(1) = 1; % Diagonal element
+    col(1) = 1;
+    row(1) = 1;
     
     for k = 2:n
-        col(k) = 1 / ((k)^q); % Downward decay (sub-diagonals)
-        row(k) = 1 / ((k)^p); % Upward decay   (super-diagonals)
+        col(k) = 1 / ((k)^q); % sub-diagonals
+        row(k) = 1 / ((k)^p); % super-diagonals
     end
-
-    row(1) = 1;
 
     col(n+1 : DimT) = 0;
     col_band = col(1 : n);
@@ -42,11 +42,10 @@ clc;
     % --- Generate finite Toeplitz matrix ---
     T = toeplitz(col, row);
     eigT = sort(eig(T));
-    
-    n = n-1;
 
  % --- Generate a movie for symbol collapse ---
     % --- Generate symbol function ---
+    n = n-1;
     syms z
     Qz = sym(0);
     for j = -n:n
@@ -61,11 +60,11 @@ clc;
     z_torus = exp(1i * theta);
 
     % --- Range of r values ---
-    r_values = linspace(3.5, 5, 1000);
+    r_values = linspace(3.5, 5, 500);
 
     % --- Prepare figure ---
-    fig = figure('Color','w');
-    ylim([-1.3*max(imag(eigT)), 1.3*max(imag(eigT))]);
+    fig = figure('Color','w', 'Position', [100, 100, 800, 600]);
+    ylim([-max(1.3*max(imag(eigT)), 0.1), max(1.3*max(imag(eigT)), 0.1)]);
     grid on
     xlabel('$\Re$', 'Interpreter', 'latex', 'FontSize', fs);
     ylabel('$\Im$', 'Interpreter', 'latex', 'FontSize', fs);
@@ -73,22 +72,70 @@ clc;
 
     hold on;
 
-    % --- Plot "open limit" ---
-    eig_plot = plot(real(eigT), imag(eigT), 'b.', 'MarkerSize', 8, 'LineWidth', 1.5);
+    % --- Generate approximate open limit ---
+
+    x = real(eigT);
+    y = imag(eigT);
+    
+    % Sort points: real axis first (by real part), then complex points (by distance from real axis, then real part)
+    realAxisMask = abs(y) < 1e-6;  
+    realAxisIdx = find(realAxisMask);
+    complexIdx = find(~realAxisMask);
+    
+    % Sort real axis points by real part
+    [~, sortReal] = sort(x(realAxisIdx));
+    realAxisIdx = realAxisIdx(sortReal);
+    
+    % Sort complex points by real part (to group branches)
+    [~, sortComplex] = sort(x(complexIdx));
+    complexIdx = complexIdx(sortComplex);
+    
+    % Plot real axis segment
+    if ~isempty(realAxisIdx)
+        eig_plot = plot(x(realAxisIdx), y(realAxisIdx), 'b-', 'LineWidth', 1.5);
+    else
+        eig_plot = [];
+    end
+    
+    % Plot branches from real axis into complex plane
+    threshold = 0.15;  % Adjust based on spacing
+    first_branch = isempty(eig_plot);
+    
+    for i = 1:length(complexIdx)
+        idx = complexIdx(i);
+        
+        % Find nearest point on real axis or already plotted complex point
+        distances = sqrt((x - x(idx)).^2 + (y - y(idx)).^2);
+        distances(idx) = inf;
+        
+        % Prefer connecting to real axis or points with smaller imaginary part
+        distances(~realAxisMask & abs(y) > abs(y(idx))) = inf;
+        
+        [minDist, nearestIdx] = min(distances);
+        
+        if minDist < threshold
+            if first_branch
+                eig_plot = plot([x(nearestIdx), x(idx)], [y(nearestIdx), y(idx)], 'b-', 'LineWidth', 2.5);
+                first_branch = false;
+            else
+                plot([x(nearestIdx), x(idx)], [y(nearestIdx), y(idx)], 'b-', 'LineWidth', 2.5, 'HandleVisibility', 'off');
+            end
+        end
+    end
+   
     % --- Plot the symbol function on the scaled torus ---
     curve_plot = plot(nan, nan, 'k', 'LineWidth', 2);
-    title(sprintf('r = %.3f', r_values(1)), 'FontSize', fs, 'Interpreter', 'latex');
+    xlim([0.8, 1.3])
+    ylim([-0.1, 0.1])
+    box on;
+    title(sprintf('r = %.3f', r_values(1)), 'FontSize', fs+7, 'Interpreter', 'latex');
 
     legend('$\lim_{n\to\infty} \sigma(T_n(f))$', '$f(r\mathbf{T})$', 'Interpreter', ...
-        'latex', 'FontSize', 16., 'Location','northeast');
-
-    % --- Prepare video writer ---
-    v = VideoWriter(video_filename, 'MPEG-4');
-    v.FrameRate = 10;  
-    open(v);
+        'latex', 'FontSize', 25., 'Location','northeast');
 
     % --- Animation loop ---
-    for r = r_values
+    for idx = 1:length(r_values)
+        r = r_values(idx);
         z_torus = r * exp(1i * theta);
         Qz_vals = zeros(1, N);
     
@@ -106,7 +153,17 @@ clc;
         title(sprintf('r = %.3f', r), 'FontSize', fs, 'Interpreter', 'latex');
         drawnow;
     
-        % --- Write frame to video ---
+        % --- Capture frame and write to GIF ---
         frame = getframe(fig);
-        writeVideo(v, frame);
+        im = frame2im(frame);
+        [imind, cm] = rgb2ind(im, 256);
+        
+        if idx == 1
+            imwrite(imind, cm, gif_filename, 'gif', 'Loopcount', inf, 'DelayTime', delay_time);
+        else
+            imwrite(imind, cm, gif_filename, 'gif', 'WriteMode', 'append', 'DelayTime', delay_time);
+        end
     end
+    
+    close(fig);
+    fprintf('GIF saved as: %s\n', gif_filename);   
