@@ -104,7 +104,7 @@ For each λ, we compute roots of *f*<sub>*m*</sub>(*z*) − λ = 0 and sort them
 
 For symbol functions with symmetric coefficients, the symbol can be expressed using trigonometric functions:
 
-$$f_m(e^{i(\alpha + i \beta)}) = a_0 + 2 \sum_{j = 1}^m a_j\bigl(\cos(\alpha k)\cosh(\beta k) - 2i\sin(\alpha k)\sinh(\beta k) \bigr)$$
+$$f_m(e^{i(\alpha + i \beta)}) = a_0 + 2 \sum_{k = 1}^m a_k\bigl(\cos(\alpha k)\cosh(\beta k) - 2i\sin(\alpha k)\sinh(\beta k) \bigr)$$
 
 The imaginary part vanishes along specific paths in the complex plane. Consequently, allowed quasimomenta must be restricted to these contours.
 
