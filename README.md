@@ -122,7 +122,7 @@ See also the accompanying paper [2] for theoretical background and additional nu
 
 ## IV. References
 
-> [1] Davies, B., De Bruijn, Y., Dupuy, S. and Hiltunen, E.O. (2025), *TODO*
+> [1] Davies, B., De Bruijn, Y., Dupuy, S. and Hiltunen, E.O. , *Spectra and pseudospectra of non-Hermitian Toeplitz operators: Eigenvector decay transitions in banded and dense matrices* (2025)
 
 > [2] Habib Ammari, Silvio Barandun, Jinghao Cao, Bryn Davies, Erik Orvehed Hiltunen, Ping Liu, *The non-Hermitian skin effect with three-dimensional long-range coupling.* J. Eur. Math. Soc. (2025), https://ems.press/journals/jems/articles/14299016
 
@@ -130,5 +130,5 @@ See also the accompanying paper [2] for theoretical background and additional nu
 
 If you use this code in your research, please cite:
 
-> Davies, B., De Bruijn, Y., Dupuy S. and Hiltunen, E.O. (2025), *TODO*
+> Davies, B., De Bruijn, Y., Dupuy S. and Hiltunen, E.O., *Spectra and pseudospectra of non-Hermitian Toeplitz operators: Eigenvector decay transitions in banded and dense matrices* (2025)
 
