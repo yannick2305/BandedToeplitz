@@ -120,9 +120,14 @@ Code for simulating the non-Hermitian skin effect in 3-dimensional systems is av
 See also the accompanying paper [2] for theoretical background and additional numerical methods.
 
 
+## IV. References
+
+> [1] Davies, B., De Bruijn, Y., Dupuy, S. and Hiltunen, E.O. , *Spectra and pseudospectra of non-Hermitian Toeplitz operators: Eigenvector decay transitions in banded and dense matrices* (2025), https://arxiv.org/abs/2512.03757
+
+> [2] Habib Ammari, Silvio Barandun, Jinghao Cao, Bryn Davies, Erik Orvehed Hiltunen, Ping Liu, *The non-Hermitian skin effect with three-dimensional long-range coupling.* J. Eur. Math. Soc. (2025), https://ems.press/journals/jems/articles/14299016
+
 ## Citation
 
 If you use this code in your research, please cite:
 
-> [1] De Bruijn, Y. and Hiltunen, E.O., *Asymptotic spectra for a class of non-Hermitian m-banded Toeplitz operators and the Mathematical Foundation for the Generalised Brillouin zone.* (2026)
-
+> Davies, B., De Bruijn, Y., Dupuy S. and Hiltunen, E.O., *Spectra and pseudospectra of non-Hermitian Toeplitz operators: Eigenvector decay transitions in banded and dense matrices* (2025)
