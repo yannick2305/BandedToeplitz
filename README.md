@@ -52,28 +52,8 @@ We demonstrate the convergence behavior of pseudospectra for finite truncations 
   <img src="Figures/PseudospectrumConvergence.png" alt="Pseudospectrum Convergence" width="700"/> 
 </p>
 
-## II.4 Spectrum of Open Limit
 
-This animation illustrates how the open spectrum comprises the intersection of spectra of Toeplitz operators evaluated on the *r*-scaled torus:
-
-$$\lim_{n\to\infty} \sigma\left(\mathbf{T}_n(f_m)\right) = \bigcap_{r>0} \sigma\left(\mathbf{T}\left(f_m(r\mathbb{T})\right)\right) = \left\lbrace \lambda \in \mathbb{C} ~:~ |z_{m}(\lambda)| = |z_{m+1}(\lambda)| \right\rbrace$$
-
-**Collapsed symbol Movie** (`CollapseSymbolMovie.m`)
-
-<p align="center"> <img src="Figures/Open_limit_real.gif" alt="Open spectrum collapse (real)" width="700"/> <br> <em>Figure 1: Open limitis real valued. Computation performed for m=3, p = 4.5 and q = 6.5.</em> </p> <p align="center"> <img src="Figures/Open_limit_complex.gif" alt="Open spectrum collapse (complex)" width="700"/> <br> <em>Figure 2: Open limit contains complex values. Computation performed for m = 6, p = 1 and q = 6</em> </p>
-
-## II.5 Reality of the Open Limit
-
-We verify numerically that the open limit produces real-valued spectra providet that $\Lambda(f_m)$ is traced out by a polar curve.
-
-**Set $\Lambda(f)$** (`OpenLimit.m`)
-
-<p align="center"> 
-  <img src="Figures/LambdaOfF.png" alt="Real-valued open limit" width="700"/> 
-</p>
-
-
-## II.6 Defect Modes
+## II.4 Defect Modes
 
 We numerically illustrate composite decay bounds acting on defect modes, demonstrating localization phenomena in perturbed systems.
 
@@ -83,7 +63,7 @@ We numerically illustrate composite decay bounds acting on defect modes, demonst
   <img src="Figures/JaffardCBS.png" alt="Defect mode decay bounds" width="700"/> 
 </p>
 
-## II.7 Complex-Valued Frequencies
+## II.5 Complex-Valued Frequencies
 
 For the open spectrum of pristine Toeplitz operators—and more generally for defect modes—eigenvalues are no longer restricted to the real line. We extend the analysis from `CBScontinuous.m` to complex-valued frequencies.
 
@@ -97,7 +77,7 @@ For each λ, we compute roots of *f*<sub>*m*</sub>(*z*) − λ = 0 and sort them
 </p>
 
 
-## II.8 Hermitian Matrices
+## II.6 Hermitian Matrices
 
 For symbol functions with symmetric coefficients, the symbol can be expressed using trigonometric functions:
 
